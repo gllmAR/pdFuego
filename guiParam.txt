@@ -1,0 +1,5 @@
+dsp-reverb-damping 0 100;
+dsp-reverb-crossover 0 5000;
+dsp-reverb-output 0 100;
+dsp-reverb-liveness 0 100;
+dsp-volume 0 1;
