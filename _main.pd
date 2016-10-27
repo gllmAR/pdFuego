@@ -1,5 +1,5 @@
 #N canvas 106 342 267 184 10;
-#N canvas 417 33 598 594 tolight 0;
+#N canvas 417 33 598 594 tolight 1;
 #X obj 31 26 inlet~;
 #X obj 106 25 inlet~;
 #X obj 187 25 inlet~;
@@ -56,9 +56,9 @@
 #X obj 630 526 print backward;
 #X obj 573 496 netsend -u -b;
 #X msg 601 465 connect 192.168.0.200 10000;
-#X obj 502 442 loadbang;
-#X obj 502 507 sel 0;
-#X obj 501 532 del 2000;
+#X obj 454 400 loadbang;
+#X obj 502 520 sel 0;
+#X obj 501 545 del 2000;
 #N canvas 957 327 450 300 dimm 0;
 #X obj 12 243 outlet;
 #X obj 33 12 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -157,6 +157,7 @@
 #X obj 552 79 metro 1;
 #X obj 549 279 * 14000;
 #X obj 549 299 expr 14000 - $f1;
+#X obj 461 430 del 500;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
 #X connect 2 0 8 0;
@@ -207,9 +208,8 @@
 #X connect 49 0 52 0;
 #X connect 52 0 50 0;
 #X connect 52 0 55 0;
-#X connect 52 1 51 0;
 #X connect 53 0 52 0;
-#X connect 54 0 53 0;
+#X connect 54 0 66 0;
 #X connect 55 0 56 0;
 #X connect 56 0 53 0;
 #X connect 57 0 58 0;
@@ -222,6 +222,7 @@
 #X connect 63 0 60 0;
 #X connect 64 0 65 0;
 #X connect 65 0 47 0;
+#X connect 66 0 53 0;
 #X restore 23 123 pd tolight;
 #N canvas 59 96 627 554 dsp 0;
 #X obj 63 451 dac~;
@@ -340,7 +341,7 @@
 #X connect 15 0 3 0;
 #X restore 262 280 pd inter;
 #X obj 261 78 hsl 128 15 0 1 0 0 empty empty 0--------------------1
--2 -8 0 10 -262144 -1 -1 4434 1;
+-2 -8 0 10 -262144 -1 -1 6555 1;
 #X text 392 257 interpolated values;
 #X text 379 233 target array;
 #X text 367 211 departure array;
