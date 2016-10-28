@@ -234,15 +234,15 @@
 #X connect 68 1 69 0;
 #X connect 69 0 67 0;
 #X restore 23 123 pd tolight;
-#N canvas 59 96 627 554 dsp 0;
-#X obj 63 451 dac~;
+#N canvas 59 96 627 554 dsp 1;
+#X obj 59 511 dac~;
 #X obj 61 324 *~ 0.2;
 #X obj 128 210 hip~ 600;
 #X obj 188 96 bp~ 1000 0.5;
 #X obj 60 371 +~;
 #X obj 89 371 +~;
-#X obj 59 418 *~ 1;
-#X obj 95 418 *~ 1;
+#X obj 59 458 *~ 1;
+#X obj 95 458 *~ 1;
 #X obj 68 208 outlet~;
 #X obj 138 233 outlet~;
 #X obj 206 299 outlet~;
@@ -251,7 +251,7 @@
 #X obj 521 273 del 100;
 #X floatatom 276 281 5 0 0 1 dsp-reverb-liveness dsp-reverb-liveness
 -, f 5;
-#X floatatom 151 395 5 0 0 1 dsp-volume dsp-volume -, f 5;
+#X floatatom 151 435 5 0 0 1 dsp-volume dsp-volume -, f 5;
 #X obj 128 354 rev3~ 85 85 500 100;
 #X floatatom 275 260 5 0 0 1 dsp-reverb-output dsp-reverb-output -
 , f 5;
@@ -268,14 +268,16 @@
 #X obj 203 225 hip~ 700;
 #X obj 60 151 lop~ 10;
 #X obj 202 255 lop~ 10000;
+#X obj 60 409 *~ 5;
+#X obj 94 409 *~ 5;
 #X connect 1 0 4 0;
 #X connect 1 0 5 0;
 #X connect 2 0 1 0;
 #X connect 2 0 9 0;
 #X connect 2 0 16 0;
 #X connect 3 0 2 0;
-#X connect 4 0 6 0;
-#X connect 5 0 7 0;
+#X connect 4 0 29 0;
+#X connect 5 0 30 0;
 #X connect 6 0 0 0;
 #X connect 7 0 0 1;
 #X connect 12 0 13 0;
@@ -300,6 +302,8 @@
 #X connect 28 0 10 0;
 #X connect 28 0 16 1;
 #X connect 28 0 1 0;
+#X connect 29 0 6 0;
+#X connect 30 0 7 0;
 #X restore 22 93 pd dsp;
 #N canvas 379 23 577 527 gestionFuego 0;
 #X obj 12 19 text define -k param;
@@ -351,7 +355,7 @@
 #X connect 15 0 3 0;
 #X restore 262 280 pd inter;
 #X obj 261 78 hsl 128 15 0 1 0 0 empty empty 0--------------------1
--2 -8 0 10 -262144 -1 -1 7768 1;
+-2 -8 0 10 -262144 -1 -1 6765 1;
 #X text 392 257 interpolated values;
 #X text 379 233 target array;
 #X text 367 211 departure array;
