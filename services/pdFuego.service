@@ -1,0 +1,13 @@
+[Unit]
+Description=pdFuedo
+
+[Service]
+User=artificiel
+Type=simple
+WatchdogSec=10
+Restart=always
+ExecStart=/bin/pd -nogui /home/artificiel/pdFuego/_main.pd
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
