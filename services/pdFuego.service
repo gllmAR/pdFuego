@@ -4,7 +4,7 @@ Description=pdFuedo
 [Service]
 User=artificiel
 Type=simple
-WatchdogSec=10
+WatchdogSec=3600
 Restart=always
 ExecStart=/bin/pd -nogui /home/artificiel/pdFuego/_main.pd
 Restart=on-failure

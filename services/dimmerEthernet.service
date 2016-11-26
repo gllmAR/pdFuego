@@ -1,0 +1,8 @@
+[Unit]
+Description=Dimmer ethernet configuration
+
+[Service]
+ExecStart=/home/artificiel/pdFuego/scripts/dimmerEthernet.sh
+
+[Install]
+WantedBy=multi-user.target
