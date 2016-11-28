@@ -16,14 +16,17 @@ http://openframeworks.cc/setup/raspberrypi/raspberry-pi-getting-started-archlinu
 Si en ssh, changer le mot de passe du user en root via 
 
 passwd [username] 
+
 pacman -Syu
 
 pacman -S sudo pd git  alsa-utils patch make cmake 
- pacman -Syu
+
 
 
 sudo usermod -a -G audio artificiel
+
 sudo usermod -a -G sudo artificiel
+
 alsa-firmware alsa-lib alsa-pluginsalsa-utils alsaplayer 
 
 zita-alsa-pcmi 
